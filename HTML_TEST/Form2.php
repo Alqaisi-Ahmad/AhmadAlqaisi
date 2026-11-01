@@ -8,30 +8,36 @@
 </head>
 
 <body>
-    <?php
-    $a= $_GET["t1"];
-    $b= $_GET["r1"];
-    $c= $_GET["s1"];
-    if(isset($_GET["b2"])){
-        header("Location: Form1.php");
-    }
-    ?>
-    <form method="get">
+    <form method="get" action="Form3.php">
         <table>
             <tr>
-                <td>Name</td>
-                <td><input type="text" name="t1" id="" value="<?php echo $a?>"></td>
+                <td>User Name</td>
+                <td><?php echo $_GET["U1"] ?></td>
             </tr>
             <tr>
-                <td>Gender</td>
-                <td><input type="text" name="r1" id="" value="<?php echo $b?>"></td>
+                <td>Product</td>
+                <td><input type="text" name="P1" id=""></td>
             </tr>
             <tr>
-                <td>Age</td>
-                <td><input type="text" name="s1" id="" value="<?php echo $c?>"></td>
+                <td>Price</td>
+                <td><input type="text" name="P2"></td>
             </tr>
             <tr>
-                <td><input type="submit" name="b2" id="" value="Back"></td>
+                <td>Qty</td>
+                <td><select name="Qty" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Report"></td>
+                <td></td>
             </tr>
         </table>
     </form>
